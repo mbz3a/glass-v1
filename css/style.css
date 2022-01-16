@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: #191a19;
+    font-family: 'Raleway';
+    color: #fff;
+}
+/* Nav */
+nav {
+    width: 100%;
+    height: 50px;
+    background: #5c677d;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+nav .logo {
+    width: 30%;
+    text-align: center;
+}
+nav .logo img {
+    width: 35px;
+}
+nav .menu-toggle-btn {
+    display: none;
+}
+nav .menu-items-container {
+    width: 70%;
+    text-align: left !important;
+}
+nav .menu-items-container ul {
+    list-style: none;
+    margin: 0;
+}
+nav .menu-items-container li {
+    display: inline-block;
+    margin: 0 10px;
+    color: rgb(219, 219, 219);
+}
+nav .menu-items-container li:hover {
+    color: #fff;
+}
+/* Products */
+.products {
+    width: 100%;
+    height: calc(100vh - 50px);
+    padding: 10px;
+    /* background: #466994; */
+    margin: 50px 0 0 0;
+    text-align: center;
+    position: relative;
+    background: url('../img/bg-full.png');
+    background-size: cover;
+    z-index: 600;
+}
+.products .prd-header {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.products .prd-header > h2 {
+    text-align: left;
+    margin: 0 0 0 18px;
+}
+.products .prd-header > p {
+    text-align: right;
+    margin-right: 30px;
+}
+.products .prd-header > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.products .prd-card {
+    width: 300px;
+    height: 400px;
+    margin: 50px 15px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 00.4);
+    /* opacity: 0.9; */
+    backdrop-filter: blur(3px);
+    /* -webkit-backdrop-filter: blur(3px); */
+    /* filter: blur(3px); */
+    transition: all 0.25s linear;
+    border-radius: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.644);
+    border-top: 1px solid rgba(255, 255, 255, 0.637);
+    padding: 20px 15px;
+}
+
+.products .prd-card:hover {
+    width: 320px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    transform: translateY(-25px);
+}
+.products .prd-card .images-container {
+    width: 100%;
+    height: 42%;
+    background: #9090ed;
+    margin: auto;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.images-container img {
+    width: 100%;
+}
+.prd-card > h4 {
+    text-align: left;
+    margin: 20px 0 0 0;
+    color: #111;
+    /* font-weight: bold; */
+    font-size: 19px;
+}
+.products .prd-card .description {
+    width: 100%;
+    height: 28%;
+    /* background: #565; */
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    text-align: left;
+    color: #1d1d1d;
+}
+
+.btns-readmore {
+    width: 100%;
+    font-size: 18px;
+    /* background: #8965; */
+    padding: 8px 0px;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #000000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+footer {
+    width: 100%;
+    height: 380px;
+    background: #2e2f2e;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+footer .ftr-card {
+    width: 33%;
+}
+
+footer .ftr-card h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+}
+footer .ftr-card p {
+    font-size: 18px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    font-weight: lighter;
+}
+.input-container {
+    margin: 20px auto;
+    text-align: center;
+}
+.input-container input {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 600;
+}
+.input-container textarea {
+    width: 300px;
+    height: 120px;
+    resize: none;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+.input-container input[type='button'] {
+    background: #58698b;
+    color: #fff;
+}
+@media only screen and (max-width: 1352px) {
+    .products {
+        height: auto !important;
+        /* background-size: c; */
+    }
+    .products .prd-header > h2 {
+        font-size: 20px;
+    }
+    .products .prd-header > p {
+        font-size: 14px;
+    }
+    .products .prd-card {
+        margin: 25px 15px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    .btns-readmore {
+        color: #000000 !important;
+        border: 1px solid rgba(255, 255, 255, 0.788);
+    }
+}
+@media only screen and (max-width: 1000px) {
+    footer {
+        height: auto;
+        padding: 0 0 20px 0;
+    }
+    footer .ftr-card {
+        width: 50%;
+    }
+    footer .ftr-card p {
+        width: 80%;
+        margin: 10px auto;
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    footer .ftr-card {
+        width: 100% !important;
+    }
+    .products {
+        height: auto !important;
+        background-image: url('');
+    }
+    .products .prd-card {
+        width: 290px;
+        height: 400px;
+        margin: 15px auto;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .products .prd-card:hover {
+        width: 290px;
+        height: 400px;
+        backdrop-filter: blur(6px);
+        transform: translateY(0);
+    }
+    .products .prd-header > h2 {
+        margin: 0 0 0 0;
+    }
+    .products .prd-header > p {
+        margin: 0 0 0 0;
+    }
+    nav {
+        /* height: auto; */
+        padding: 7px;
+    }
+    nav .logo {
+        width: 20%;
+    }
+    nav .logo img {
+        width: 30px;
+    }
+    nav .menu-items-container {
+        display: none;
+        width: 100%;
+    }
+    nav .menu-items-container ul li {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    nav .menu-toggle-btn {
+        width: 80%;
+        display: block;
+        font-size: 24px;
+        margin: 0 !important;
+        text-align: right !important;
+        padding-right: 30px;
+    }
+    .auto-height {
+        height: auto;
+    }
+}
+
+.display-block {
+    display: block !important ;
+    z-index: 100;
+}
